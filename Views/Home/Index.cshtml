@@ -35,16 +35,7 @@
     </tr>
         @foreach (Books b in Model.Books)
         {
-        <tr>
-            <td>@b.Title</td>
-            <td>@b.Author</td>
-            <td>@b.Publisher</td>
-            <td>@b.ISBN</td>
-            <td>@b.Classification</td>
-            <td>@b.Category</td>
-            <td>@b.PageCount</td>
-            <td>$@b.Price</td>
-        </tr>
+            <partial name="ProjectSummary" model="b"/>
 
     }
     </table>
