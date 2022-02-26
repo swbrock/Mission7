@@ -48,7 +48,7 @@
     </tr>
 </table>
 
-    <form method="post" asp-page="/Donate">
+    <form method="post" asp-page="/BuyBooks">
         
         <input type="hidden" asp-for="@Model.BookId" />
         <input type="hidden" name="returnUrl" value="@ViewContext.HttpContext.Request.PathAndQuery()" />
