@@ -22,7 +22,7 @@ namespace Mission7.Components
                 .Select(x => x.Category)
                 .Distinct()
                 .OrderBy(x => x);
-            return View();
+            return View(types);
         }
     }
 }
