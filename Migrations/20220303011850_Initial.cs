@@ -89,8 +89,8 @@ namespace Mission7.Migrations
             migrationBuilder.DropTable(
                 name: "BasketLineItem");
 
-            //migrationBuilder.DropTable(
-            //    name: "Books");
+            migrationBuilder.DropTable(
+                name: "Books");
 
             migrationBuilder.DropTable(
                 name: "Purchases");

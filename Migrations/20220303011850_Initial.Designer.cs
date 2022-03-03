@@ -9,7 +9,7 @@ using Mission7.Models;
 namespace Mission7.Migrations
 {
     [DbContext(typeof(BookstoreContext))]
-    [Migration("20220303005450_Initial")]
+    [Migration("20220303011850_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
