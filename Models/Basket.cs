@@ -20,7 +20,7 @@ namespace Mission7.Models
                 {
                     Book = book,
                     Quantity = qty
-                });
+                }) ;
             }
             else
             {

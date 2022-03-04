@@ -19,6 +19,15 @@ namespace Mission7.Pages
         }
         public Basket basket { get; set; }
         public string ReturnUrl { get; set; }
+        public int total { get; set; }
+        public virtual int TotalBooks()
+        {
+            foreach(var i in basket.Items)
+            {
+                total = total + 1;
+            }
+            return total;
+        }
         public void OnGet(string returnUrl)
         {
             ReturnUrl = returnUrl ?? "/";
@@ -29,13 +38,15 @@ namespace Mission7.Pages
             Books b = repo.Books.FirstOrDefault(x => x.BookId == bookId);
 
             basket.AddItem(b, 1);
-
+            total++;
             return RedirectToPage(new { ReturnUrl = returnUrl });
         }
         public IActionResult OnPostRemove (int bookId, string returnUrl)
         {
             basket.RemoveItem(basket.Items.First(x => x.Book.BookId == bookId).Book);
+            total--;
             return RedirectToPage(new { ReturnUrl = returnUrl });
+            
         }
     }
 }
