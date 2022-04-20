@@ -1,4 +1,5 @@
 ﻿<!DOCTYPE html>
+
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
@@ -8,24 +9,14 @@
 
 </head>
 <body>
-
     <div class="bg-dark text-white p-2">
-        <span class="navbar-brand navbar-toggler">Book Store</span> @*Added Nav-bar toggler*@
+        BOOK STORE
         <i class="fa" style="font-size:24px">&#xf07a;</i>
-        <span class='badge badge-warning' id='lblCartCount'></span>
-
-    </div>
-    <div class="row m-1 p-1">
-        <div id="types" class="col-3">
-            <vc:types></vc:types>
-        </div>
-        <div class="col-9">
-            <div>
-                @RenderBody()
-            </div>
-        </div>
-
+        <span class='badge badge-warning' id='lblCartCount'> 2 </span>
     </div>
 
+    <div class="m-1 p-1">
+        @RenderBody()
+    </div>
 </body>
 </html>

@@ -9,5 +9,6 @@ namespace Mission7.Models.ViewModels
     {
         public IQueryable<Books> Books { get; set; }
         public BookInfo BookInfo;
+
     }
 }
